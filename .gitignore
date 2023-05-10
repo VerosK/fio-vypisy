@@ -1,0 +1,6 @@
+# ignore file with secrets
+tokens.ini
+# ignore downloaded files
+20??/
+# ignore archives
+*.zip

@@ -1,0 +1,52 @@
+[config]
+formats = pdf gpc csv
+
+[account:verosk-czk]
+account = 2400000000
+token = AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+archive = verosk
+
+[account:verosk-eur]
+account = 2400000001
+token = VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+archive = verosk
+
+
+[account:martina]
+account = 2100000003
+token = QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+archive = martina
+
+[account:martina-eur]
+account = 2000000004
+token = eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+archive = martina
+# change these when the account is new
+offset = 0
+
+[mailto:martina]
+smtp_server = smtp.eu.mailgun.org
+mailto = martina@XXXXXXXXXXX.cz
+replyto = XXXXXXXXXXXX@XXXXXX.cz
+mailfrom = XXXXXXXX@XXXXXXX.XXXXXXXXXX.cz
+mailpassword = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+subject_txt = Výpisy Martina
+body = 
+	Ahoj, 
+	posílám ti Tvoje výpisy z  FIO banky.  
+
+	--Věrošův robot
+
+[mailto:verosk]
+smtp_server = smtp.eu.mailgun.org
+mailto = martina@XXXXXXXXXXX.cz
+replyto = XXXXXXXXXXXX@XXXXXX.cz
+mailfrom = XXXXXXXX@XXXXXXX.XXXXXXXXXX.cz
+mailpassword = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+subject_txt = Výpisy Věroš
+body = 
+	Ahoj, 
+	posílám ti moje výpisy z  FIO banky.  
+	Prosím o kontrolu.
+
+	--Věrošův robot
