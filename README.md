@@ -1,8 +1,9 @@
 # FIO Výpisy 
 
 If you can't understand the language, then the repository
-is not probably intended for you. It contains
-script for automating Czech Fio bank.
+is probably not intended for you. It contains a Python script 
+for automating access to Czech Fio bank.
+
 
 ## K čemu to je?
 
@@ -15,8 +16,9 @@ dá zkrátit na 5 minut.
 ## Použití
 
  * okopírovat `tokens.ini.example` na `tokens.ini`
- * doplnit Read-Only tokeny z FIO banky do `tokens.ini`
- * získat přístupy k nějakému SMTP serveru (AWS SES, Gmail, Mailgun)   
+ * doplnit Read-Only tokeny z FIO banky do `tokens.ini` a případně přidat
+   nějaké sekce s dalšími účty a jejich tokeny.
+ * získat přístupy k nějakému SMTP serveru (AWS SES, Google Mail, Mailgun)   
    a vložit je do `tokens.ini`
  * spustit skript
 
@@ -33,10 +35,14 @@ dá zkrátit na 5 minut.
    spustit znovu.
  * FIO banka praděpodobně generuje PDF verzi výpisu minulého měsíce první 
    den následujícího měsíce. Pokud skript spadne na 404 (Not Found) nebo na
-   500 (Error), obvykle stačí počka 86400 vteřin a spustit o den později.
+   500 (Error), obvykle stačí počkat 86400 vteřin a spustit znovu.
+ * Pokud na účtu není daný měsíc žádný pohyb, tak FIO banka výpis ani nevygeneruje
+   a skript pak spadne na 404 (Not Found). Asi by to šlo detekovat, nicméně
+   bylo jednodušší nastavit trvalý příkaz, který jednou za měsíc z každého 
+   účtu pošle korunu či euro na jiný účet.
 
 ## License
 
-Skript je jakékoliv záruky a podpory. It works on my laptop.
+Skript je prost jakékoliv záruky a podpory. It works on my laptop™.
 
 CC0 or WTFPL
